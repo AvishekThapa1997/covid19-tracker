@@ -1,2 +1,2 @@
 # Demo
-<img src="app/records/records.gif">
+<img src="app/records/records.gif" height="400">
