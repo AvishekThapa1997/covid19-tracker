@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.MainActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/shimmer_top_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.02" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/shimmer_start_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.03" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/shimmer_end_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.97" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/shimmer_bottom_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.98" />
+
+    <View
+        android:id="@+id/shimmer_india_covid_tracker"
+        android:layout_width="95dp"
+        android:layout_height="35dp"
+        android:background="@color/shimmerBackground"
+        app:layout_constraintStart_toStartOf="@id/shimmer_start_guideline"
+        app:layout_constraintTop_toTopOf="@id/shimmer_top_guideline" />
+
+    <View
+        android:id="@+id/shimmer_text_last_updated"
+        android:layout_width="95dp"
+        android:layout_height="16dp"
+        android:background="@color/shimmerBackground"
+        app:layout_constraintEnd_toEndOf="@id/shimmer_end_guideline"
+        app:layout_constraintTop_toTopOf="@id/shimmer_top_guideline" />
+
+    <View
+        android:id="@+id/shimmer_last_updated_time"
+        android:layout_width="65dp"
+        android:layout_height="16dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/shimmerBackground"
+        app:layout_constraintEnd_toEndOf="@id/shimmer_end_guideline"
+        app:layout_constraintTop_toBottomOf="@id/shimmer_text_last_updated" />
+
+    <View
+        android:id="@+id/shimmer_text_confirmed"
+        android:layout_width="0dp"
+        android:layout_height="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:background="@color/shimmerBackground"
+        app:layout_constraintEnd_toStartOf="@id/shimmer_text_active"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toStartOf="@id/shimmer_start_guideline"
+        app:layout_constraintTop_toBottomOf="@+id/shimmer_india_covid_tracker" />
+
+    <View
+        android:id="@+id/shimmer_text_active"
+        android:layout_width="0dp"
+        android:layout_height="16dp"
+        android:layout_marginEnd="8dp"
+        android:background="@color/shimmerBackground"
+        app:layout_constraintEnd_toStartOf="@id/shimmer_text_recovered"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@id/shimmer_text_confirmed"
+        app:layout_constraintTop_toTopOf="@id/shimmer_text_confirmed" />
+
+    <View
+        android:id="@+id/shimmer_text_recovered"
+        android:layout_width="0dp"
+        android:layout_height="16dp"
+        android:layout_marginEnd="8dp"
+        android:background="@color/shimmerBackground"
+        app:layout_constraintEnd_toStartOf="@id/shimmer_text_deceased"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@id/shimmer_text_active"
+        app:layout_constraintTop_toTopOf="@id/shimmer_text_active" />
+
+    <TextView
+        android:id="@+id/shimmer_text_deceased"
+        android:layout_width="0dp"
+        android:layout_height="16dp"
+        android:background="@color/shimmerBackground"
+        app:layout_constraintEnd_toStartOf="@id/shimmer_end_guideline"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@id/shimmer_text_recovered"
+        app:layout_constraintTop_toTopOf="@id/shimmer_text_recovered" />
+
+    <View
+        android:id="@+id/shimmer_image_virus"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/shimmer_round_drawable"
+        app:layout_constraintDimensionRatio="10:9"
+        app:layout_constraintEnd_toEndOf="@id/shimmer_text_confirmed"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/shimmer_text_confirmed"
+        app:layout_constraintTop_toBottomOf="@id/shimmer_text_confirmed" />
+
+    <View
+        android:id="@+id/shimmer_image_patient"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/shimmer_round_drawable"
+        android:paddingStart="6dp"
+        android:paddingEnd="0dp"
+        app:layout_constraintDimensionRatio="10:9"
+        app:layout_constraintEnd_toEndOf="@id/shimmer_text_active"
+        app:layout_constraintStart_toStartOf="@id/shimmer_text_active"
+        app:layout_constraintTop_toBottomOf="@id/shimmer_text_active" />
+
+    <View
+        android:id="@+id/shimmer_image_heart"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/shimmer_round_drawable"
+        app:layout_constraintDimensionRatio="10:9"
+        app:layout_constraintEnd_toEndOf="@id/shimmer_text_recovered"
+        app:layout_constraintStart_toStartOf="@id/shimmer_text_recovered"
+        app:layout_constraintTop_toBottomOf="@id/shimmer_text_recovered" />
+
+    <View
+        android:id="@+id/shimmer_image_death"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/shimmer_round_drawable"
+        app:layout_constraintDimensionRatio="10:9"
+        app:layout_constraintEnd_toEndOf="@id/shimmer_text_deceased"
+        app:layout_constraintStart_toStartOf="@id/shimmer_text_deceased"
+        app:layout_constraintTop_toBottomOf="@id/shimmer_text_deceased" />
+
+    <View
+        android:id="@+id/shimmer_confirmed_data"
+        android:layout_width="0dp"
+        android:layout_height="16dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/shimmerBackground"
+        app:layout_constraintEnd_toEndOf="@id/shimmer_image_virus"
+        app:layout_constraintStart_toStartOf="@id/shimmer_image_virus"
+        app:layout_constraintTop_toBottomOf="@id/shimmer_image_virus" />
+
+    <View
+        android:id="@+id/shimmer_active_data"
+        android:layout_width="0dp"
+        android:layout_height="16dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/shimmerBackground"
+        app:layout_constraintEnd_toEndOf="@id/shimmer_image_patient"
+        app:layout_constraintStart_toStartOf="@id/shimmer_image_patient"
+        app:layout_constraintTop_toBottomOf="@id/shimmer_image_patient" />
+
+    <View
+        android:id="@+id/shimmer_recovered_data"
+        android:layout_width="0dp"
+        android:layout_height="16dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/shimmerBackground"
+        app:layout_constraintEnd_toEndOf="@id/shimmer_image_heart"
+        app:layout_constraintStart_toStartOf="@id/shimmer_image_heart"
+        app:layout_constraintTop_toBottomOf="@id/shimmer_image_heart" />
+
+    <View
+        android:id="@+id/shimmer_deceased_data"
+        android:layout_width="0dp"
+        android:layout_height="16dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/shimmerBackground"
+        app:layout_constraintEnd_toEndOf="@id/shimmer_image_death"
+        app:layout_constraintStart_toStartOf="@id/shimmer_image_death"
+        app:layout_constraintTop_toBottomOf="@id/shimmer_image_death" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/shimmer_text_state_ut_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.35" />
+
+    <View
+        android:id="@+id/shimmer_text_state_ut"
+        android:layout_width="0dp"
+        android:layout_height="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:background="@color/shimmerBackground"
+        app:layout_constraintEnd_toEndOf="@id/shimmer_text_state_ut_guideline"
+        app:layout_constraintStart_toStartOf="@id/shimmer_start_guideline"
+        app:layout_constraintTop_toBottomOf="@id/shimmer_confirmed_data" />
+
+    <View
+        android:id="@+id/shimmer_state_confirmed_data"
+        android:layout_width="0dp"
+        android:layout_height="16dp"
+        android:layout_marginEnd="8dp"
+        android:background="@color/shimmerBackground"
+        app:layout_constraintBottom_toBottomOf="@id/shimmer_text_state_ut"
+        app:layout_constraintEnd_toStartOf="@id/shimmer_text_active_data"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toStartOf="@id/shimmer_text_state_ut_guideline"
+        app:layout_constraintTop_toTopOf="@id/shimmer_text_state_ut" />
+
+    <View
+        android:id="@+id/shimmer_text_active_data"
+        android:layout_width="0dp"
+        android:layout_height="16dp"
+        android:layout_marginEnd="8dp"
+        android:background="@color/shimmerBackground"
+        app:layout_constraintBottom_toBottomOf="@id/shimmer_state_confirmed_data"
+        app:layout_constraintEnd_toStartOf="@id/shimmer_state_recovered_data"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@id/shimmer_state_confirmed_data"
+        app:layout_constraintTop_toTopOf="@id/shimmer_state_confirmed_data" />
+
+    <View
+        android:id="@+id/shimmer_state_recovered_data"
+        android:layout_width="0dp"
+        android:layout_height="16dp"
+        android:layout_marginEnd="8dp"
+        android:background="@color/shimmerBackground"
+        app:layout_constraintBottom_toBottomOf="@id/shimmer_text_active_data"
+        app:layout_constraintEnd_toStartOf="@id/shimmer_layout_deceased_data"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@id/shimmer_text_active_data"
+        app:layout_constraintTop_toTopOf="@id/shimmer_text_active_data" />
+
+    <View
+        android:id="@+id/shimmer_layout_deceased_data"
+        android:layout_width="0dp"
+        android:layout_height="16dp"
+        android:background="@color/shimmerBackground"
+        app:layout_constraintBottom_toBottomOf="@id/shimmer_state_recovered_data"
+        app:layout_constraintEnd_toEndOf="@id/shimmer_end_guideline"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@id/shimmer_state_recovered_data"
+        app:layout_constraintTop_toTopOf="@id/shimmer_state_recovered_data" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="@id/shimmer_end_guideline"
+        app:layout_constraintStart_toStartOf="@id/shimmer_start_guideline"
+        app:layout_constraintTop_toBottomOf="@id/shimmer_layout_deceased_data">
+
+        <include
+            layout="@layout/sub_shimmer_layout"
+            android:layout_height="28dp"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="8dp" />
+
+        <include
+            layout="@layout/sub_shimmer_layout"
+            android:layout_height="28dp"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="8dp" />
+        <include
+            layout="@layout/sub_shimmer_layout"
+            android:layout_height="28dp"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="8dp" />
+        <include
+            layout="@layout/sub_shimmer_layout"
+            android:layout_height="28dp"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="8dp" />
+        <include
+            layout="@layout/sub_shimmer_layout"
+            android:layout_height="28dp"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="8dp" />
+        <include
+            layout="@layout/sub_shimmer_layout"
+            android:layout_height="28dp"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="8dp" />
+        <include
+            layout="@layout/sub_shimmer_layout"
+            android:layout_height="28dp"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="8dp" />
+        <include
+            layout="@layout/sub_shimmer_layout"
+            android:layout_height="28dp"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="8dp" />
+        <include
+            layout="@layout/sub_shimmer_layout"
+            android:layout_height="28dp"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="8dp" />
+        <include
+            layout="@layout/sub_shimmer_layout"
+            android:layout_height="28dp"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="8dp" />
+        <include
+            layout="@layout/sub_shimmer_layout"
+            android:layout_height="28dp"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="8dp" />
+        <include
+            layout="@layout/sub_shimmer_layout"
+            android:layout_height="28dp"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="8dp" />
+        <include
+            layout="@layout/sub_shimmer_layout"
+            android:layout_height="28dp"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="8dp" />
+        <include
+            layout="@layout/sub_shimmer_layout"
+            android:layout_height="28dp"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="8dp" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

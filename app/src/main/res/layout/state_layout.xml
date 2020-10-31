@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/text_state_ut_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.32" />
+
+        <TextView
+            android:id="@+id/state_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textAllCaps="true"
+            android:textColor="@android:color/black"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/text_state_ut_guideline"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/state_confirmed_data"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:textAllCaps="true"
+            android:textColor="@android:color/holo_red_dark"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/state_name"
+            app:layout_constraintEnd_toStartOf="@id/state_active_data"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toStartOf="@id/text_state_ut_guideline"
+            app:layout_constraintTop_toTopOf="@id/state_name" />
+
+        <TextView
+            android:id="@+id/delta_state_confirmed_data"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:textAllCaps="true"
+            android:textColor="@android:color/holo_red_dark"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/state_confirmed_data"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toStartOf="@id/state_confirmed_data"
+            app:layout_constraintTop_toBottomOf="@id/state_confirmed_data" />
+
+        <TextView
+            android:id="@+id/state_active_data"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:textAllCaps="true"
+            android:textColor="@android:color/holo_blue_dark"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/state_confirmed_data"
+            app:layout_constraintEnd_toStartOf="@id/state_recovered_data"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@id/state_confirmed_data"
+            app:layout_constraintTop_toTopOf="@id/state_confirmed_data" />
+
+        <TextView
+            android:id="@+id/delta_state_active_data"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:textAllCaps="true"
+            android:textColor="@android:color/holo_blue_dark"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/state_active_data"
+            app:layout_constraintStart_toStartOf="@id/state_active_data"
+            app:layout_constraintTop_toBottomOf="@id/state_active_data" />
+
+        <TextView
+            android:id="@+id/state_recovered_data"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:textAllCaps="true"
+            android:textColor="@android:color/holo_green_dark"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/state_active_data"
+            app:layout_constraintEnd_toStartOf="@id/deceased_data"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@id/state_active_data"
+            app:layout_constraintTop_toTopOf="@id/state_active_data" />
+
+        <TextView
+            android:id="@+id/delta_state_recovered_data"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:textAllCaps="true"
+            android:textColor="@android:color/holo_green_dark"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/state_recovered_data"
+            app:layout_constraintStart_toStartOf="@id/state_recovered_data"
+            app:layout_constraintTop_toBottomOf="@id/state_recovered_data" />
+
+        <TextView
+            android:id="@+id/deceased_data"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:textAllCaps="true"
+            android:textColor="@android:color/holo_orange_dark"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/state_recovered_data"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@id/state_recovered_data"
+            app:layout_constraintTop_toTopOf="@id/state_recovered_data" />
+
+        <TextView
+            android:id="@+id/delta_state_deceased_data"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:textAllCaps="true"
+            android:textColor="@android:color/holo_orange_dark"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/deceased_data"
+            app:layout_constraintStart_toStartOf="@id/deceased_data"
+            app:layout_constraintTop_toBottomOf="@id/deceased_data" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

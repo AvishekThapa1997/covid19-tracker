@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Covid-19 Tracker</string>
+    <string name="india_covid_19_ntracker">india covid-19\ntracker</string>
+    <string name="last_updated">last updated</string>
+    <string name="confirmed">confirmed</string>
+    <string name="active">active</string>
+    <string name="recovered">recovered</string>
+    <string name="deceased">deceased</string>
+    <string name="state_ut">state/ut</string>
+    <string name="short_confirmed">cnfmd</string>
+    <string name="short_active">actv</string>
+    <string name="short_recovered">rcvrd</string>
+    <string name="short_deceased">dcsd</string>
+    <string name="retry">retry</string>
+</resources>
